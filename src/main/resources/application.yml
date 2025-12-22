@@ -1,0 +1,10 @@
+# spring.application.name=Menu
+spring:
+  application:
+    name: Menu
+# ??????
+server:
+  port: 9898
+
+#?????
+
