@@ -5,7 +5,7 @@ package com.lg.menu.common;/*
 */
 
 
-import com.lg.menu.enums.ResponseEnum;
+import com.lg.menu.common.enums.ResponseEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

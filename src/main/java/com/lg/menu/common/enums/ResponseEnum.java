@@ -1,4 +1,4 @@
-package com.lg.menu.enums;
+package com.lg.menu.common.enums;
 
 
 import lombok.Getter;
