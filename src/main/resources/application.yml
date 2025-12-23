@@ -2,9 +2,34 @@
 spring:
   application:
     name: Menu
+  # ?????
+  datasource:
+    url: jdbc:mysql://localhost:3306/menu?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
 # ??????
 server:
   port: 9898
 
-#?????
+
+# mybatis ???
+mybatis:
+  # ?? mybatis ?xml???????
+  mapper-locations: classpath:mapper/**/*.xml
+  # ??????????
+  type-aliases-package: com.lg.menu.model
+  configuration:
+    # ????????
+    map-underscore-to-camel-case: true
+    # ????
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
+# ?????? : ?mybatis?????
+logging:
+  level:
+    com.lg.com.lg.menu: debug
+
+
 
