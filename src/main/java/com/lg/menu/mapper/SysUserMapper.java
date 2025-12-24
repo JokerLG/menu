@@ -13,4 +13,7 @@ public interface SysUserMapper {
     List<SysUser> selectAll();
 
     int updateByPrimaryKey(SysUser record);
+
+
+    SysUser selectByUserName(String userName);
 }

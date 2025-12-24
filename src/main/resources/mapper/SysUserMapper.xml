@@ -52,4 +52,8 @@
     select id, user_name, password, name, sex, phone, email, status, update_time, create_time
     from sys_user
   </select>
+  <select id="selectByUserName" resultType="com.lg.menu.model.SysUser" parameterType="java.lang.String">
+    select * from sys_user
+    where user_name = ${userName}
+  </select>
 </mapper>
