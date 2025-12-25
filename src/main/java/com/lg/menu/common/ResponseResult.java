@@ -19,7 +19,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class ResponseResult<T> {
     /**
      * 状态码

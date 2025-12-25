@@ -4,20 +4,24 @@ package com.lg.menu.controller;/*
 描述： 系统用户 请求接口
 */
 
+import com.lg.menu.common.ResponseResult;
 import com.lg.menu.mapper.SysUserMapper;
+import com.lg.menu.service.impl.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/sysUser")
 public class SysUserController {
 
     @Autowired
-    private SysUserMapper sysUserMapper;
+    private SysUserService sysUserService;
 
-    @GetMapping("/test")
-    public Integer test(){
-
-        return null;
+    @GetMapping("/login")
+    public ResponseResult test(@RequestParam String userName, String password){
+        return sysUserService.login(userName,password);
     }
 }

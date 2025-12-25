@@ -1,5 +1,6 @@
 package com.lg.menu.common.exception;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,8 +8,7 @@ import lombok.Setter;
  * 业务异常类
  * 用于封装业务层的异常信息，区别于系统异常（如NullPointerException）
  */
-@Setter
-@Getter
+@Data
 public class ServiceException extends RuntimeException {
 
     /**
@@ -60,5 +60,19 @@ public class ServiceException extends RuntimeException {
         this.message = message;
     }
 
+    public Integer getCode() {
+        return code;
+    }
 
+    public void setCode(Integer code) {
+        this.code = code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 }
